@@ -38,6 +38,7 @@ object main {
     // 将处理后的 DataFrame 保存为 Parquet 文件
     df1.write
       // 设置写入模式为覆盖，如果输出路径已存在则覆盖原有文件
+      // 插入写用append
       .mode("overwrite") 
       // 指定输出路径
       .parquet(outputPath)
